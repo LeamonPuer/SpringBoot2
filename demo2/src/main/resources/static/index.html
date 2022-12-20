@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Index!</h1>
+<a th:href="@{/person/John/26}">John</a>
+<a href="/person/John?age=26&hobby=1&hobby=2">John</a>
+<form action="/delete" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="text" name="name" value="Tom">
+    <input type="submit" value="delete">
+</form>
+<form action="/rb" method="post">
+    <input type="text" name="name" value="Tom">
+    <input type="text" name="name" value="Lina">
+    <input type="submit" value="post">
+</form>
+</body>
+</html>
